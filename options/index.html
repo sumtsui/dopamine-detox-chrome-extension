@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../global.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Settings</h1>
+      <section id="bad-sites">
+        <h2>Enter the dopamine heavy websites you try to avoid.</h2>
+        <label for="urlInput">URL:</label>
+        <input type="text" class="urlInput" />
+        <div class="urlDisplay"></div>
+      </section>
+      <section id="good-sites">
+        <h2>Enter the websites you think is good for you.</h2>
+        <label for="urlInput">URL:</label>
+        <input type="text" class="urlInput" />
+        <div class="urlDisplay"></div>
+      </section>
+      <!-- <section class="message-section">
+        <h2>Customize your message.</h2>
+        <textarea
+          id="userMsg"
+          name="user-message"
+          id="userMessage"
+          cols="30"
+          rows="10"
+          placeholder="If you can be your best version today, why wait for tomorrow."
+        ></textarea>
+        <button id="msgSaveBtn">Save</button>
+      </section> -->
+      <section>
+        <h2>Customize when to take effect in a day.</h2>
+        <div class="section-body" id="whenToShow">
+          <div class="radio-group">
+            <input type="radio" id="allDay" value="allDay" name="whenToShow" />
+            <label for="allDay">All day</label>
+            <input type="radio" id="selectedTimeRange" value="selectedTimeRange" name="whenToShow" />
+            <label for="selectedTimeRange">Time range</label>
+          </div>
+          <div class="time-range-setting">
+            <div class="item">
+              <label for="startTime">Start time:</label>
+              <input type="time" id="startTime" name="startTime" />
+            </div>
+            <div class="item">
+              <label for="endTime">End time:</label>
+              <input type="time" id="endTime" name="endTime" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2>Extension activated:</h2>
+        <div class="section-body" id="togglePlugin">
+          <div class="radio-group" id="toggleActivationRadioGroup">
+            <input type="radio" id="activated" name="activated" value="yes" />
+            <label for="yes">Yes</label>
+            <input type="radio" id="inactivated" name="inactivated" value="no" />
+            <label for="no">No</label>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+  <script src="options.js"></script>
+</html>

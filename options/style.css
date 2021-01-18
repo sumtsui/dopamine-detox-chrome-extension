@@ -1,0 +1,66 @@
+main {
+  width: 70%;
+  margin: auto;
+  padding: 2em 2em 6em;
+  min-height: 100vh;
+  background-color: beige;
+}
+h1 {
+  margin-bottom: 2.8em;
+}
+h2 {
+  font-size: medium;
+}
+#urlDisplay {
+  margin-top: 1.2em;
+}
+.url-item {
+  display: flex;
+  align-items: center;
+}
+.url-item img {
+  width: 16px;
+}
+.url-item img:hover {
+  cursor: pointer;
+}
+.url-item :first-child {
+  margin-right: 20px;
+}
+section {
+  margin-bottom: 5em;
+}
+section .section-body {
+  display: flex;
+  flex-direction: column;
+}
+section .section-body > * {
+  margin-bottom: 1em;
+}
+
+#urlInput {
+  margin-bottom: 0;
+}
+
+section p {
+  margin: 0;
+}
+
+.message-section {
+  display: flex;
+  flex-direction: column;
+}
+.message-section textarea {
+  max-width: 600px;
+  margin-bottom: 1em;
+}
+
+.time-range-setting {
+  margin-top: 1.5em;
+}
+.radio-group {
+  display: flex;
+}
+.radio-group label:first-of-type {
+  margin-right: 1em;
+}

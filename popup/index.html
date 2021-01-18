@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../global.css" />
+    <style>
+      main {
+        padding: 2em 2em;
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background-color: bisque;
+      }
+      #settingSection.hide,
+      #tempDisableSection.hide,
+      #enableSection.hide,
+      #badUrls.hide,
+      #notification.hide {
+        display: none;
+      }
+      section p {
+        text-align: center;
+      }
+      section {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .temp-disable-hint {
+        user-select: none;
+      }
+      #temp-disable-input {
+        min-width: 180px;
+      }
+      #settingIcon img {
+        width: 30px;
+        position: absolute;
+        left: 10px;
+        top: 10px;
+      }
+      #settingIcon img {
+        background-color: #d1cbcb88;
+        border-radius: 50%;
+      }
+      #settingIcon img:hover {
+        cursor: pointer;
+      }
+      li {
+        font-size: 1.4em;
+      }
+      #badUrls ol {
+        align-self: flex-start;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="settingIcon">
+      <img src="../assets/images/dotdotdot.png" alt="setting" />
+    </div>
+    <main>
+      <section id="badUrls" class="hide">
+        <p>Blocked list</p>
+      </section>
+      <section id="settingSection" class="hide">
+        <p>No website address yet.</p>
+        <button id="toSetting">Settings</button>
+      </section>
+      <section id="enableSection" class="hide">
+        <p>The extension is inactivated.</p>
+        <button id="enableBtn">Enable</button>
+      </section>
+      <section id="notification" class="hide"><p></p></section>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
