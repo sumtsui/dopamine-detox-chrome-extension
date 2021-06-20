@@ -178,7 +178,7 @@ function addUrlDisplayItem(url, option) {
 
   wrap.classList.add('url-item');
   item.innerText = url;
-  removeButton.src = '../assets/images/cross.png';
+  removeButton.src = '../assets/cross.png';
   removeButton.alt = 'url-delete-button';
   removeButton.addEventListener('click', (evt) => {
     onRemoveUrl(url, evt.target.parentElement, option);

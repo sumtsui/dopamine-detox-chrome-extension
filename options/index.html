@@ -9,6 +9,11 @@
       <h1>Settings</h1>
       <section id="bad-sites">
         <h2>Enter the dopamine heavy websites you try to avoid.</h2>
+        <div style="margin-bottom: 10px;">
+          <span>
+            You will receive a scary warning this extension could modify your data on these websites. But it only needs this permission to know you are navigating to these websites so it can steer you away.
+          </span>
+        </div>
         <label for="urlInput">URL:</label>
         <input type="text" class="urlInput" />
         <div class="urlDisplay"></div>
@@ -37,7 +42,12 @@
           <div class="radio-group">
             <input type="radio" id="allDay" value="allDay" name="whenToShow" />
             <label for="allDay">All day</label>
-            <input type="radio" id="selectedTimeRange" value="selectedTimeRange" name="whenToShow" />
+            <input
+              type="radio"
+              id="selectedTimeRange"
+              value="selectedTimeRange"
+              name="whenToShow"
+            />
             <label for="selectedTimeRange">Time range</label>
           </div>
           <div class="time-range-setting">
@@ -58,7 +68,12 @@
           <div class="radio-group" id="toggleActivationRadioGroup">
             <input type="radio" id="activated" name="activated" value="yes" />
             <label for="yes">Yes</label>
-            <input type="radio" id="inactivated" name="inactivated" value="no" />
+            <input
+              type="radio"
+              id="inactivated"
+              name="inactivated"
+              value="no"
+            />
             <label for="no">No</label>
           </div>
         </div>
