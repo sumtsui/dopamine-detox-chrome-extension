@@ -193,7 +193,7 @@ function addUrlDisplayItem(url, option) {
 function onRemoveUrl(url, urlItemEl, option) {
   if (!option) throw new Error('onRemoveUrl: no option provided');
   if (window.confirm('Are you sure?')) {
-    if (option === 'bad') {
+    if (option === 'bad' && guessingGame()) {
       updateFieldInStorage((urls) => urls.filter((u) => u !== url), 'urls');
       badUrlDisplay.removeChild(urlItemEl);
     } else {

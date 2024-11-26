@@ -48,7 +48,7 @@ chrome.tabs.onUpdated.addListener(async function (tabId, changeInfo, tab) {
         },
         function (result) {
           if (result) {
-            chrome.tabs.create({ url: chrome.runtime.getURL('./alternativePage/index.html') });
+            chrome.tabs.create({ url: chrome.runtime.getURL('./assets/alternative-page.html') });
             chrome.tabs.remove(tabId);
             // chrome.tabs.executeScript({
             //   file: 'contents/index.js',
