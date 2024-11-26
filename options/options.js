@@ -193,7 +193,7 @@ function addUrlDisplayItem(url, option) {
 function onRemoveUrl(url, urlItemEl, option) {
   if (!option) throw new Error('onRemoveUrl: no option provided');
   if (window.confirm('Are you sure?')) {
-    if (option === 'bad' && guessingGame()) {
+    if (option === 'bad' && guessingGame(true)) {
       updateFieldInStorage((urls) => urls.filter((u) => u !== url), 'urls');
       badUrlDisplay.removeChild(urlItemEl);
     } else {
@@ -244,7 +244,7 @@ function getRandomIntInclusive(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
 }
 
-function guessingGame() {
+function guessingGame(isRemoveAUrl) {
   const num = getRandomIntInclusive(1, 50);
   console.log('num', num);
 
@@ -263,6 +263,7 @@ function guessingGame() {
     else result = window.prompt('Try again.');
   }
 
-  window.alert('Fine, you got it. The extension is now disabled for 12 hours. After that it will resume.');
+  if (isRemoveAUrl) window.alert('Url removed.');
+  else window.alert('Fine, you got it. The extension is now disabled for 12 hours. After that it will resume.');
   return true;
 }
