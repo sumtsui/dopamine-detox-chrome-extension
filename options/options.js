@@ -1,7 +1,7 @@
-const badUrlInput = document.querySelector('#bad-sites .urlInput');
+const badUrlInput = document.getElementById('urlInput');
 const badUrlDisplay = document.querySelector('#bad-sites .urlDisplay');
-const goodUrlInput = document.querySelector('#good-sites .urlInput');
-const goodUrlDisplay = document.querySelector('#good-sites .urlDisplay');
+// const goodUrlInput = document.querySelector('#good-sites .urlInput');
+// const goodUrlDisplay = document.querySelector('#good-sites .urlDisplay');
 // const msgTextArea = document.getElementById('userMsg');
 // const msgSaveBtn = document.getElementById('msgSaveBtn');
 const timeAllDay = document.getElementById('allDay');
@@ -125,16 +125,16 @@ badUrlInput.addEventListener('keypress', (evt) => {
   }
 });
 
-goodUrlInput.addEventListener('keypress', (evt) => {
-  if (evt.key === 'Enter') {
-    const value = evt.target.value;
+// goodUrlInput.addEventListener('keypress', (evt) => {
+//   if (evt.key === 'Enter') {
+//     const value = evt.target.value;
 
-    evt.target.value = '';
+//     evt.target.value = '';
 
-    updateFieldInStorage((urls) => [...urls, value], 'goodUrls');
-    addUrlDisplayItem(value, 'good');
-  }
-});
+//     updateFieldInStorage((urls) => [...urls, value], 'goodUrls');
+//     addUrlDisplayItem(value, 'good');
+//   }
+// });
 
 whenToShow.addEventListener('change', timeOption.onWhenToShowChange);
 timeRangeStart.addEventListener('input', timeOption.onStartTimeSet);
@@ -187,7 +187,7 @@ function addUrlDisplayItem(url, option) {
   wrap.appendChild(item);
   wrap.appendChild(removeButton);
   if (option === 'bad') badUrlDisplay.appendChild(wrap);
-  else if (option === 'good') goodUrlDisplay.appendChild(wrap);
+  // else if (option === 'good') goodUrlDisplay.appendChild(wrap);
 }
 
 function onRemoveUrl(url, urlItemEl, option) {
@@ -198,7 +198,7 @@ function onRemoveUrl(url, urlItemEl, option) {
       badUrlDisplay.removeChild(urlItemEl);
     } else {
       updateFieldInStorage((urls) => urls.filter((u) => u !== url), 'goodUrls');
-      goodUrlDisplay.removeChild(urlItemEl);
+      // goodUrlDisplay.removeChild(urlItemEl);
     }
   }
 }

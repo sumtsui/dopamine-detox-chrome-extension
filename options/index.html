@@ -15,27 +15,28 @@
           </span>
         </div>
         <label for="urlInput">URL:</label>
-        <input type="text" class="urlInput" />
+        <input type="text" id="urlInput" class="urlInput" />
         <div class="urlDisplay"></div>
       </section>
-      <section id="good-sites">
+      <!-- <section id="good-sites">
         <h2>Enter the websites you think is good for you.</h2>
         <label for="urlInput">URL:</label>
         <input type="text" class="urlInput" />
         <div class="urlDisplay"></div>
-      </section>
-      <!-- <section class="message-section">
+      </section> -->
+      <section class="message-section">
         <h2>Customize your message.</h2>
+        <span>Message shown on the alternative page (not implemented yet)</span> 
         <textarea
           id="userMsg"
           name="user-message"
           id="userMessage"
           cols="30"
           rows="10"
-          placeholder="If you can be your best version today, why wait for tomorrow."
+          placeholder="How you spend your day, is how you spend your life."
         ></textarea>
         <button id="msgSaveBtn">Save</button>
-      </section> -->
+      </section>
       <section>
         <h2>Customize when to take effect in a day.</h2>
         <div class="section-body" id="whenToShow">
@@ -67,14 +68,14 @@
         <div class="section-body" id="togglePlugin">
           <div class="radio-group" id="toggleActivationRadioGroup">
             <input type="radio" id="activated" name="activated" value="yes" />
-            <label for="yes">Yes</label>
+            <label for="activated">Yes</label>
             <input
               type="radio"
               id="inactivated"
               name="inactivated"
               value="no"
             />
-            <label for="no">No</label>
+            <label for="inactivated">No</label>
           </div>
         </div>
       </section>
