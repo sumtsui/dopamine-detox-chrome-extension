@@ -1,7 +1,7 @@
 {
   "name": "dopamine-detox",
   "version": "1.1.0",
-  "description": "A chrome extension to help people fight the tempatation",
+  "description": "help people visit less the dopamine heavy websites",
   "scripts": {
     "lint": "eslint --fix"
   },
